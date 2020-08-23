@@ -1,0 +1,1 @@
+﻿const finalMessage = document.querySelector('.final');

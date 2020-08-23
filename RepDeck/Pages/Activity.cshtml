@@ -5,6 +5,30 @@
 }
 
 <div class="text-center vibe">
-    <h1>New Deck:</h1>
+    <h1>Your New Deck Experience:</h1>
+</div>
+<div class="counter">
+    <div class="nums">
+        <span class="in vectro-body">3</span>
+        <span class="vectro-red">2</span>
+        <span class="vectro-green">1</span>
+        <span class="vectro-blue">0</span>
+    </div>
+</div>
+<div class="final">
+    <div class="card-group">
+        <div class="card border-warning nb-3">
+            <div class="card-body">
+                <h5 class="card-title vibe">@Model.currentDeck.cardDeck[0].name</h5>
+                <h6 class="card-subtitle text-muted">Targets @Model.currentDeck.cardDeck[0].muscleGroup</h6>
+                <ul class="list-group list-group-flush">
+                    @for (int i = 1; i < Model.currentDeck.cardDeck[0].description.Split(")").Length; i++)
+                    {
+                    <li class="list-group-item" style="margin:2px">@Model.currentDeck.cardDeck[0].description.Split(")")[i].Split(".")[0]</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
