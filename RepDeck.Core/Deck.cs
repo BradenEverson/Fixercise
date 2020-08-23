@@ -66,7 +66,14 @@ namespace RepDeck.Core
                 deck.Add(newCard);
                 }
             }
-            return deck;
+            List<Card> shuffledDeck = new List<Card>();
+            for(int i = 0; i < deck.Count()/2; i++)
+            {
+                Card newCard = deck[StaticRandom.Instance.Next(0, deck.Count() - 1)];
+                shuffledDeck.Add(newCard);
+                deck.Remove(newCard);
+            }
+            return shuffledDeck;
         }
     }
 }

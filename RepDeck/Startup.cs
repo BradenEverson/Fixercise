@@ -31,6 +31,7 @@ namespace RepDeck
             services.AddDefaultIdentity<User>()
                 .AddEntityFrameworkStores<RepDeckContext>();
             services.AddSingleton<IDeckData, InMemoryDeckDb>();
+            services.AddSignalR();
 
         }
 
@@ -58,6 +59,7 @@ namespace RepDeck
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapHub<ExerciseHub>("/ExerciseHub");
             });
         }
     }

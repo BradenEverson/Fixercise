@@ -19,9 +19,9 @@
     <div class="card-group">
         <div class="card border-warning nb-3">
             <div class="card-body">
-                <h5 class="card-title vibe">@Model.currentDeck.cardDeck[0].name</h5>
-                <h6 class="card-subtitle text-muted">Targets @Model.currentDeck.cardDeck[0].muscleGroup</h6>
-                <ul class="list-group list-group-flush">
+                <h5 class="card-title vibe" id="name">@Model.currentDeck.cardDeck[0].name</h5>
+                <h6 class="card-subtitle text-muted" id="muscleGroup">Targets @Model.currentDeck.cardDeck[0].muscleGroup</h6>
+                <ul class="list-group list-group-flush" id="list">
                     @for (int i = 1; i < Model.currentDeck.cardDeck[0].description.Split(")").Length; i++)
                     {
                     <li class="list-group-item" style="margin:2px">@Model.currentDeck.cardDeck[0].description.Split(")")[i].Split(".")[0]</li>
@@ -31,4 +31,7 @@
         </div>
     </div>
 </div>
+<button onclick="send('@Model.currentDeck.deckGuid')" id="next" class="btn border-info">Next</button>
+<script src="~/lib/signalr/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/exercise.js"></script>
 
