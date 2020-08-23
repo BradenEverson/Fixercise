@@ -41,15 +41,31 @@ namespace RepDeck.Database
 
         public int getScore(string id)
         {
-            return userScoreDict[id];
+            if (userScoreDict.ContainsKey(id))
+            {
+                return userScoreDict[id];
+            }
+            else
+            {
+                addUserIdToDict(id);
+                return userScoreDict[id];
+            }
         }
 
         public int increaseScore(string id)
         {
-            int currentScore = userScoreDict[id];
-            userScoreDict.Remove(id);
-            userScoreDict.Add(id, currentScore++);
-            return userScoreDict[id];
+            if (userScoreDict.ContainsKey(id))
+            {
+                int currentScore = userScoreDict[id];
+                userScoreDict.Remove(id);
+                userScoreDict.Add(id, currentScore++);
+                return userScoreDict[id];
+            }
+            else
+            {
+                addUserIdToDict(id);
+                return increaseScore(id);
+            }
         }
 
         public Deck update(Deck updatedDeck)

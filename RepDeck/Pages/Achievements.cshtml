@@ -5,5 +5,9 @@
 }
     <div class="text-center vibe">
         <h1>Your Achievements</h1>
-    </div>
 
+        <h2 style="margin:12%">Current Level: @((Model.decks.getScore(Model.currentUser.bindingString)/25)+1) </h2>
+    </div>
+    <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width:@(Model.decks.getScore(Model.currentUser.bindingString))%" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>

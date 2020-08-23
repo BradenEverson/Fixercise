@@ -3,35 +3,56 @@
 @{
     ViewData["Title"] = "Activity";
 }
-
-<div class="text-center vibe">
-    <h1>Your New Deck Experience:</h1>
-</div>
-<div class="counter">
-    <div class="nums">
-        <span class="in vectro-body">3</span>
-        <span class="vectro-red">2</span>
-        <span class="vectro-green">1</span>
-        <span class="vectro-blue">0</span>
-    </div>
-</div>
-<div class="final">
-    <div class="card-group">
-        <div class="card border-warning nb-3">
-            <div class="card-body">
-                <h5 class="card-title vibe" id="name">@Model.currentDeck.cardDeck[0].name</h5>
-                <h6 class="card-subtitle text-muted" id="muscleGroup">Targets @Model.currentDeck.cardDeck[0].muscleGroup</h6>
-                <ul class="list-group list-group-flush" id="list">
-                    @for (int i = 1; i < Model.currentDeck.cardDeck[0].description.Split(")").Length; i++)
-                    {
-                    <li class="list-group-item" style="margin:2px">@Model.currentDeck.cardDeck[0].description.Split(")")[i].Split(".")[0]</li>
-                    }
-                </ul>
+    <div>
+        <div class="text-center vibe">
+            <h1>Your New Deck Experience:</h1>
+        </div>
+        <div class="counter">
+            <div class="nums">
+                <span class="in vectro-body">3</span>
+                <span class="vectro-red">2</span>
+                <span class="vectro-green">1</span>
+                <span class="vectro-blue">0</span>
+            </div>
+        </div>
+        <div class="final">
+            <div class="card-group">
+                <div class="card border-warning nb-3">
+                    <div class="card-body">
+                        <h5 class="card-title vibe" id="name">@Model.currentDeck.cardDeck[0].name</h5>
+                        <h6 class="card-subtitle text-muted" id="muscleGroup">Targets @Model.currentDeck.cardDeck[0].muscleGroup</h6>
+                        <ul class="list-group list-group-flush" id="list">
+                            @for (int i = 1; i < Model.currentDeck.cardDeck[0].description.Split(")").Length; i++)
+                            {
+                                <li class="list-group-item" style="margin:2px">@Model.currentDeck.cardDeck[0].description.Split(")")[i].Split(".")[0]</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container" style="position:relative;right:0;bottom:0;">
+            <button onclick="send('@Model.currentDeck.deckGuid','@Model.currentUser.bindingString')" id="next" class="btn border-info">Next</button>
+        </div>
+        <script src="~/lib/signalr/signalr/dist/browser/signalr.js"></script>
+        <script src="~/js/exercise.js"></script>
+        <div class="modal fade border-success" id="alert" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Great Job!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        You completed an exercise! You gained one new exercise point
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn border-secondary" data-dismiss="modal">Close</button>
+                        <a asp-area="" asp-page="Achievements" class="btn border-primary">My Achievements</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<button onclick="send('@Model.currentDeck.deckGuid')" id="next" class="btn border-info">Next</button>
-<script src="~/lib/signalr/signalr/dist/browser/signalr.js"></script>
-<script src="~/js/exercise.js"></script>
-

@@ -7,47 +7,49 @@
     <h1>Create A New Deck</h1>
 </div>
 <form method="post">
-    <div class="input-group">
-        <div class="btn-group-sm">
-            <div style="width:35%;position:relative;left:0;margin:10%">
-                <div class="text-center vibe">
-                    <h6>Muscle Group Target<a class="text-muted">(S)</a>:</h6>
-                </div>
-                <input type="radio" asp-for="muscleGroups" value="bodypart.php?id=11&exercises=All" checked="checked" style="margin:2%" />All
-                <input type="radio" asp-for="muscleGroups" value="bodypart.php?id=0&exercises=Abs" style="margin:2%" />Abs
-                <input type="radio" asp-for="muscleGroups" value="bodypart.php?id=1&exercises=Back" style="margin:2%" /> Back
-                <input type="radio" asp-for="muscleGroups" value="bodypart.php?id=2&exercises=Biceps" style="margin:2%" /> Biceps
-                <input type="radio" asp-for="muscleGroups" value="bodypart.php?id=3&exercises=Chest" style="margin:2%" /> Chest
-                <input type="radio" asp-for="muscleGroups" value="bodypart.php?id=4&exercises=Forearm" style="margin:2%" /> Forearm
-                <input type="radio" asp-for="muscleGroups" value="bodypart.php?id=5&exercises=Glutes" style="margin:2%" /> Glutes
-                <input type="radio" asp-for="muscleGroups" value="bodypart.php?id=6&exercises=Shoulders" style="margin:2%" /> Shoulders
-                <input type="radio" asp-for="muscleGroups" value="bodypart.php?id=7&exercises=Triceps" style="margin:2%" /> Triceps
-                <input type="radio" asp-for="muscleGroups" value="bodypart.php?id=8&exercises=Upper-Legs" style="margin:2%" /> Upper Legs
-                <input type="radio" asp-for="muscleGroups" value="bodypart.php?id=9&exercises=Lower-Legs" style="margin:2%" /> Lower Legs
+    <div class="input-group" style="width:100%;align-content:center;">
+                <div class="form-group text-center" style="width:100%;align-content:center;">
+                    <div class="vibe">
+                        <label for="muscle">Muscle Group:</label>
+                    </div>
+                    <select class="form-control" asp-for="muscleGroups" style="width:60%;align-content:center" id="muscle">
+                        <option type="radio" value="bodypart.php?id=11&exercises=All" checked="checked" style="margin:2%">All</option>
+                        <option type="radio" value="bodypart.php?id=0&exercises=Abs" style="margin:2%">Abs</option>
+                        <option type="radio" value="bodypart.php?id=1&exercises=Back" style="margin:2%"> Back</option>
+                        <option type="radio" value="bodypart.php?id=2&exercises=Biceps" style="margin:2%"> Biceps</option>
+                        <option type="radio" value="bodypart.php?id=3&exercises=Chest" style="margin:2%"> Chest</option>
+                        <option type="radio" value="bodypart.php?id=4&exercises=Forearm" style="margin:2%"> Forearm</option>
+                        <option type="radio" value="bodypart.php?id=5&exercises=Glutes" style="margin:2%"> Glutes</option>
+                        <option type="radio" value="bodypart.php?id=6&exercises=Shoulders" style="margin:2%"> Shoulders</option>
+                        <option type="radio" value="bodypart.php?id=7&exercises=Triceps" style="margin:2%"> Triceps</option>
+                        <option type="radio" value="bodypart.php?id=8&exercises=Upper-Legs" style="margin:2%"> Upper Legs</option>
+                        <option type="radio" value="bodypart.php?id=9&exercises=Lower-Legs" style="margin:2%"> Lower Legs</option>
+                    </select>
+                    </div>
         </div>
-            <div class="btn-group-sm"style="width:50%">
-                  <div style="width:35%;position:relative;right:0;margin:10%">
-                      <div class="text-center vibe">
-                          <h6>Difficulty:</h6>
-                      </div>
-                      <div>
-                          <label>
-                              <input type="radio" asp-for="Difficulty" value="&exercises=All&page=1&All=0&Bands=0&Bench=0&Dumbbell=0&EZBar=0&Kettlebell=0&MachineStrength=0&MachineCardio=0&Barbell=0&BodyOnly=0&ExerciseBall=0&FoamRoll=0&PullBar=0&WeightPlate=0&Other=0&Strength=0&Stretching=0&Powerlifting=0&OlympicWeightLifting=0&Beginner=1&Intermediate=0&Expert=0"/>Beginner
-                          </label>
-                      </div>
-                      <div>
-                          <label>
-                              <input type="radio" asp-for="Difficulty" value="&exercises=All&page=1&All=0&Bands=0&Bench=0&Dumbbell=0&EZBar=0&Kettlebell=0&MachineStrength=0&MachineCardio=0&Barbell=0&BodyOnly=0&ExerciseBall=0&FoamRoll=0&PullBar=0&WeightPlate=0&Other=0&Strength=0&Stretching=0&Powerlifting=0&OlympicWeightLifting=0&Beginner=0&Intermediate=1&Expert=0"/>Intermediate
-                          </label>
-                      </div>
-                      <div>
-                          <label>
-                              <input type="radio" asp-for="Difficulty" value="&exercises=All&page=1&All=0&Bands=0&Bench=0&Dumbbell=0&EZBar=0&Kettlebell=0&MachineStrength=0&MachineCardio=0&Barbell=0&BodyOnly=0&ExerciseBall=0&FoamRoll=0&PullBar=0&WeightPlate=0&Other=0&Strength=0&Stretching=0&Powerlifting=0&OlympicWeightLifting=0&Beginner=0&Intermediate=0&Expert=1"/>Expert
-                          </label>
-                      </div>
-                  </div>
-</div>
-    </div>
+    <div class="form-group" style="align-content:center">
+                    <div class="btn-group-sm">
+                        <div style="width:35%;position:relative;right:0;margin:10%">
+                            <div class="text-center vibe">
+                                <h6>Difficulty:</h6>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="radio" asp-for="Difficulty" value="&exercises=All&page=1&All=0&Bands=0&Bench=0&Dumbbell=0&EZBar=0&Kettlebell=0&MachineStrength=0&MachineCardio=0&Barbell=0&BodyOnly=0&ExerciseBall=0&FoamRoll=0&PullBar=0&WeightPlate=0&Other=0&Strength=0&Stretching=0&Powerlifting=0&OlympicWeightLifting=0&Beginner=1&Intermediate=0&Expert=0" />Beginner
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="radio" asp-for="Difficulty" value="&exercises=All&page=1&All=0&Bands=0&Bench=0&Dumbbell=0&EZBar=0&Kettlebell=0&MachineStrength=0&MachineCardio=0&Barbell=0&BodyOnly=0&ExerciseBall=0&FoamRoll=0&PullBar=0&WeightPlate=0&Other=0&Strength=0&Stretching=0&Powerlifting=0&OlympicWeightLifting=0&Beginner=0&Intermediate=1&Expert=0" />Intermediate
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="radio" asp-for="Difficulty" value="&exercises=All&page=1&All=0&Bands=0&Bench=0&Dumbbell=0&EZBar=0&Kettlebell=0&MachineStrength=0&MachineCardio=0&Barbell=0&BodyOnly=0&ExerciseBall=0&FoamRoll=0&PullBar=0&WeightPlate=0&Other=0&Strength=0&Stretching=0&Powerlifting=0&OlympicWeightLifting=0&Beginner=0&Intermediate=0&Expert=1" />Expert
+                                </label>
+                            </div>
+                        </div>
+                        </div>
         </div>
     <div class="align-bottom" style="display:flex;align-items:center;justify-content:center">
         <button type="submit" class="btn border-info">Create</button>

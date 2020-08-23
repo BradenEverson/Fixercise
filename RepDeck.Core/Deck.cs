@@ -67,7 +67,7 @@ namespace RepDeck.Core
                 }
             }
             List<Card> shuffledDeck = new List<Card>();
-            for(int i = 0; i < deck.Count()/2; i++)
+            for(int i = 0; i < deck.Count(); i++)
             {
                 Card newCard = deck[StaticRandom.Instance.Next(0, deck.Count() - 1)];
                 shuffledDeck.Add(newCard);

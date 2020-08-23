@@ -16,15 +16,18 @@ connection.on("newExercise", function (name, muscleGroup, description) {
     document.getElementById("muscleGroup").innerHTML = muscleGroup;
     finalMessage.classList.add("show");
 });
+connection.on("Finished", function () {
+    $("#alert").modal('show')
+});
 
 connection.start().then(function () {
     document.getElementById("next").disabled = false;
 }).catch(function (err) {
     return console.error(err);
 });
-function send(guid) {
+function send(guid, stringBind) {
     finalMessage.classList.remove("show");
-    connection.invoke("NextExercise", guid).catch(function (err) {
+    connection.invoke("NextExercise", guid, stringBind).catch(function (err) {
         return console.error(err);
     });
     event.preventDefault();
