@@ -32,7 +32,7 @@ namespace RepDeck
         }
         public IActionResult OnPost()
         {
-            Deck newDeck = new Deck("https://www.exercise.com/exercises?search=&" + muscleGroups + Difficulty + Type);
+            Deck newDeck = new Deck("https://www.jefit.com/exercises/" + muscleGroups + Difficulty + Type);
             decks.add(newDeck);
             return RedirectToPage("./Activity", new {DeckGuid = newDeck.deckGuid});
         }
