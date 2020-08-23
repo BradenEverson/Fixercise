@@ -11,27 +11,84 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Candal);
 
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+
+@import url(https://fonts.googleapis.com/css?family=Monoton);
+.vectro {
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.1px #f1f1f1;
+    font-family: 'Righteous', cursive;
+    font-size: 160px;
+    margin: 150px 0 50px 0;
+}
+
+    .vectro:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        /*-webkit-animation:vectro_effect 0.067s infinite;*/
+    }
+.vectro-body {
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(#C3BFB4 0%, #FDFCFA 50%, #E8E7E5 51%, #757172 52%, #E8E9DB 100%);
+    -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+}
+
+.vectro-red {
+    color: #F10C20;
+    -webkit-text-fill-color: #F10C20;
+    -webkit-text-stroke: 0;
+    -webkit-filter: drop-shadow(2px 2px 15px #F10C20);
+    font-style: italic;
+    padding-right: 20px;
+}
+.vectro-green {
+    color: #6BFF2B;
+    -webkit-text-fill-color: #6BFF2B;
+    -webkit-filter: drop-shadow(2px 2px 15px #6BFF2B);
+    -webkit-text-stroke: 0;
+    font-style: italic;
+    padding-right: 20px;
+    margin-left: -20px;
+}
+.vectro-blue {
+    color: #3F59F4;
+    -webkit-text-fill-color: #3F59F4;
+    -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+    -webkit-text-stroke: 0;
+    font-style: italic;
+    padding-right: 20px;
+    margin-left: -20px;
+}
 :root {
-    --blue: #2a9fd6;
+    --blue: #3F59F4;
     --indigo: #6610f2;
     --purple: #6f42c1;
     --pink: #e83e8c;
-    --red: #cc0000;
+    --red: #F10C20;
     --orange: #fd7e14;
     --yellow: #ff8800;
-    --green: #77b300;
+    --green: #6BFF2B;
     --teal: #20c997;
     --cyan: #9933cc;
     --white: #fff;
     --gray: #555;
     --gray-dark: #222;
-    --primary: #2a9fd6;
+    --primary: #3F59F4;
     --secondary: #555;
-    --success: #77b300;
+    --success: #6BFF2B;
     --info: #9933cc;
     --warning: #ff8800;
-    --danger: #cc0000;
+    --danger: #F10C20;
     --light: #222;
     --dark: #adafae;
     --breakpoint-xs: 0;
@@ -6940,7 +6997,8 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .border-primary {
-    border-color: #2a9fd6 !important
+    border-color: #3F59F4;
+    -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
 }
 
 .border-secondary {
@@ -6948,7 +7006,8 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .border-success {
-    border-color: #77b300 !important
+    border-color: #6BFF2B;
+    -webkit-filter: drop-shadow(2px 2px 15px #6BFF2B);
 }
 
 .border-info {
@@ -6960,7 +7019,8 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 }
 
 .border-danger {
-    border-color: #cc0000 !important
+    border-color: #F10C20;
+    -webkit-filter: drop-shadow(2px 2px 15px #F10C20);
 }
 
 .border-light {
