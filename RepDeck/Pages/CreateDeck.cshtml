@@ -1,0 +1,62 @@
+﻿@page
+@model RepDeck.CreateDeckModel
+@{
+    ViewData["Title"] = "CreateDeck";
+}
+<div class="text-center vibe">
+    <h1>Create A New Deck</h1>
+</div>
+<form method="post">
+    <div class="input-group">
+        <div class="btn-group-sm">
+            <div style="width:35%;position:relative;left:0;margin:10%">
+                <div class="text-center vibe">
+                    <h6>Muscle Group Target<a class="text-muted">(S)</a>:</h6>
+                </div>
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=1" style="margin:2%" />Chest
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=2" style="margin:2%" /> Neck
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=4" style="margin:2%" /> Shoulders
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=5" style="margin:2%" /> Biceps
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=6" style="margin:2%" /> Forearms
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=7" style="margin:2%" /> Abs
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=8" style="margin:2%" /> Quads
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=9" style="margin:2%" /> Chest
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=10" style="margin:2%" /> Triceps
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=11" style="margin:2%" /> Lats
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=12" style="margin:2%" /> Middle Back
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=13" style="margin:2%" /> Lower Back
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=14" style="margin:2%" /> Glutes
+                <input type="radio" asp-for="muscleGroups" value="&Muscle%20Group=15" style="margin:2%" /> Hamstrings
+            </div>
+        </div><div class="btn-group-sm"style="width:50%">
+                  <div style="width:35%;position:relative;right:0;margin:10%">
+                      <div class="text-center vibe">
+                          <h6>Difficulty:</h6>
+                      </div>
+                      <div >
+                          <label>
+                              <input type="radio" asp-for="Difficulty" value="&Difficulty=0"/>Very Easy
+                          </label>
+                      </div>
+                      <div>
+                          <label>
+                              <input type="radio" asp-for="Difficulty" value="&Difficulty=1"/>Beginner
+                          </label>
+                      </div>
+                      <div>
+                          <label>
+                              <input type="radio" asp-for="Difficulty" value="&Difficulty=2"/>Intermediate
+                          </label>
+                      </div>
+                      <div>
+                          <label>
+                              <input type="radio" asp-for="Difficulty" value="&Difficulty=3"/>Expert
+                          </label>
+                      </div>
+                  </div>
+</div>
+    </div>
+    <div class="align-bottom" style="display:flex;align-items:center;justify-content:center">
+        <button type="submit" class="btn border-info">Create</button>
+    </div>
+</form>

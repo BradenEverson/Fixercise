@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepDeck", "RepDeck\RepDeck.csproj", "{CDB5B67A-9C45-4B96-9E65-81A63BDE39A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepDeck", "RepDeck\RepDeck.csproj", "{CDB5B67A-9C45-4B96-9E65-81A63BDE39A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepDeck.Core", "RepDeck.Core\RepDeck.Core.csproj", "{D17E8220-86C0-47D2-B095-7C84A5DF38A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepDeck.Database", "RepDeck.Database\RepDeck.Database.csproj", "{888FDD34-F174-4B77-B95B-C4CC47CDFC68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{CDB5B67A-9C45-4B96-9E65-81A63BDE39A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDB5B67A-9C45-4B96-9E65-81A63BDE39A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDB5B67A-9C45-4B96-9E65-81A63BDE39A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D17E8220-86C0-47D2-B095-7C84A5DF38A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D17E8220-86C0-47D2-B095-7C84A5DF38A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D17E8220-86C0-47D2-B095-7C84A5DF38A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D17E8220-86C0-47D2-B095-7C84A5DF38A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888FDD34-F174-4B77-B95B-C4CC47CDFC68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888FDD34-F174-4B77-B95B-C4CC47CDFC68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888FDD34-F174-4B77-B95B-C4CC47CDFC68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888FDD34-F174-4B77-B95B-C4CC47CDFC68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

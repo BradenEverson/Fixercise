@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RepDeck.Data;
+using RepDeck.Database;
 
 namespace RepDeck
 {
@@ -29,6 +30,7 @@ namespace RepDeck
             services.AddRazorPages();
             services.AddDefaultIdentity<User>()
                 .AddEntityFrameworkStores<RepDeckContext>();
+            services.AddSingleton<IDeckData, InMemoryDeckDb>();
 
         }
 

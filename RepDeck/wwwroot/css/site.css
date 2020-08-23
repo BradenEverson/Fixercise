@@ -37,6 +37,9 @@
         height: 100%;
         /*-webkit-animation:vectro_effect 0.067s infinite;*/
     }
+.vibe {
+    -webkit-filter: drop-shadow(1px 1px 10px #FDFCFA);
+}
 .vectro-body {
     -webkit-background-clip: text;
     background-image: -webkit-linear-gradient(#C3BFB4 0%, #FDFCFA 50%, #E8E7E5 51%, #757172 52%, #E8E9DB 100%);
